@@ -5,8 +5,8 @@ set -e
 echo "Starting SSH ..."
 service ssh start
 
-date > /home/env-now.txt
-env >> /home/env-now.txt
+date > env-now.txt
+env >> env-now.txt
 
 python manage.py collectstatic
 python manage.py migrate
